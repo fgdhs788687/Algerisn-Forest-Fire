@@ -58,6 +58,8 @@ The requirements.txt file should contain:
   - flask
   - matplotlib
   - seaborn
+
+
 To start the web application, run applicationn.py from your terminal:
 python applicationn.py
 The application will be hosted on your local machine. Open a web browser and navigate to the provided address to access the user interface. On the FWI prediction page,
