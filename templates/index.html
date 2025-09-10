@@ -1,0 +1,98 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --dark-bg: #111827;
+            --card-bg: rgba(31, 41, 55, 0.8);
+            --primary-text: #F9FAFB;
+            --secondary-text: #D1D5DB;
+            --accent-color: #3B82F6;
+            --accent-glow: #60A5FA;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(to bottom right, var(--dark-bg), #030712);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            color: var(--primary-text);
+            text-align: center;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            max-width: 700px;
+            width: 100%;
+            animation: fadeIn 1s ease-in-out;
+            position: relative;
+            z-index: 1;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5em, 5vw, 4.5em);
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px var(--accent-glow), 0 0 20px var(--accent-color);
+            font-weight: 600;
+        }
+
+        p.subtitle {
+            font-size: clamp(1em, 2vw, 1.4em);
+            color: var(--secondary-text);
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--accent-color), #2563EB);
+            color: var(--primary-text);
+            padding: 15px 30px;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border: none;
+        }
+
+        .btn:hover {
+            background: linear-gradient(45deg, #2563EB, var(--accent-color));
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 15px var(--accent-glow);
+        }
+
+        .btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome To My Web Page</h1>
+        <p class="subtitle">This is a modern, responsive, and visually appealing home page.</p>
+        <a href="{{ url_for('fwi_prediction') }}" class="btn">Get Started</a>
+    </div>
+</body>
+</html>
